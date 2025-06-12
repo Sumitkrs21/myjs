@@ -33,3 +33,26 @@ const bigNumber = 213456789034567n
  }
  console.log(typeof id);
  
+
+
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ // Stack(Primitive) , Heap(Non-Primitive) 
+
+ let myYoutubeName = "sumitkumar.com"
+
+ let anotherName = myYoutubeName
+ anotherName = "domejksjs"
+ console.log(anotherName);
+ console.log(myYoutubeName);
+
+ let userOne= {
+  email:"user@google.com",
+  upi:"user@axl"
+ }
+
+ let userTwo=userOne
+ userTwo.email = "sumit@gmail.com"
+console.log(userOne);
+
+ 
