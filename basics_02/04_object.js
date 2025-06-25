@@ -54,11 +54,44 @@ const regularUser = {
     ]
 
     users[1].email
- console.log(chatUser);
- console.log(Object.keys(chatUser)); // Get keys of the object
-    console.log(Object.values(chatUser)); // Get values of the object
-    console.log(Object.entries(chatUser)); // Get key-value pairs of the object
+//  console.log(chatUser);
+//  console.log(Object.keys(chatUser)); // Get keys of the object
+//     console.log(Object.values(chatUser)); // Get values of the object
+//     console.log(Object.entries(chatUser)); // Get key-value pairs of the object
 
-    console.log(chatUser.hasOwnProperty('isLoggedIn')); // Check if the object has a specific property
+//     console.log(chatUser.hasOwnProperty('isLoggedIn')); // Check if the object has a specific property
     
+
+
+
+    //destructuring objects
+    const course ={
+        coursename: "JavaScript",
+        price: 999,
+        cousreinstructor: "Sumit Kumar",
+    }
  
+    // course.cousreinstructor
+
+    const{cousreinstructor: a} =course
+    // console.log(cousreinstructor); // Output: Sumit Kumar
+    console.log(a); // Output: Sumit Kumar
+
+
+
+
+    // Api's
+    //json
+    // {
+    //        "name": "Sumit",
+    //        "coursename": "JavaScript",
+    //        "price": 999
+
+    // }
+
+
+    [
+        {},
+        {},
+        {}
+    ]
