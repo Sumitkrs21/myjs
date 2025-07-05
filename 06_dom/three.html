@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color:black;color:white;">
+    
+</body>
+<script>
+    const div = document.createElement('div');
+    console.log(div);
+    div.className ="main";
+    div.id =Math.round(Math.random()*10+1)
+    div.setAttribute("tilte","generate a title")   //it directly set the element to its desired position
+    div.style.backgroundColor="purple"
+    div.style.padding="12px"
+    // div.innerText = "sumit"  //it overwrites the value if exist earlier (first fetch the already existing value and then replace it)
+    const addText = document.createTextNode("sumit kumar")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+
+
+    const arr1 = ['ashish','bhanu','naveen','gautam']
+    const arr2 = ['purple','green','yellow','red']
+    arr1.forEach( ( text,index ) => multipleButtons(text,arr2[index]))
+   
+
+    function multipleButtons(text,bgColor)
+    {
+     const button = document.createElement('button')
+     console.log(button)
+     button.setAttribute('className','firstbutton')
+     button.setAttribute('type','submit')
+     button.style.backgroundColor = `${bgColor}`
+     button.style.cursor = 'pointer'
+     button.style.padding = "12px"
+     button.style.borderRadius = "10px"
+     const textnode = document.createTextNode(`${text}`)
+     button.appendChild(textnode)
+     document.body.appendChild(button)
+    }
+</script>
+</html>
