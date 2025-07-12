@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sumit kumar</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(()=>{
+    //     console.log("sumit")
+    // },2000) // by arrow fuction
+
+    const saySumit = ()=>{
+        console.log("sumit");
+    }
+
+    setTimeout(saySumit,2000) // by reference of function
+
+      
+     const changeText =()=>{
+    document.querySelector("h1").innerHTML="welcome here on website"
+     }
+     const changeMe = setTimeout(changeText,2000)
+
+     document.querySelector('#stop').addEventListener('click',(e)=>{
+        console.log(changeMe)
+      clearTimeout(changeMe)
+          
+     })
+
+</script>
+</html>
