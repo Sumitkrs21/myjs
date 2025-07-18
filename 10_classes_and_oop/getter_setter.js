@@ -1,7 +1,7 @@
 class User{
     constructor(email,password){
-        this.email = email;
-        this.password = password;
+        this._email = email;
+        this._password = password;
     }
 
     get password(){
