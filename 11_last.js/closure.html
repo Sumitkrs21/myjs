@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: #212121;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+//       function init() {
+//          let name = "Mozilla"; 
+//          function displayName() {
+//               console.log(name); 
+//             }
+//         displayName();
+//     }
+// init();
+
+
+
+
+// function Outer(){
+//     let username= "sumit"
+    
+//     function Inner(){
+//         let secret ="myname123"
+//         console.log("inner",username); 
+//     }
+//     Inner();
+// }
+// Outer();
+//  console.log("too outer",username); // This will throw an error because username is not defined in this scope
+
+
+// closure is a function that has access to its own scope, the outer function's scope, and the global scope, even after the outer function has finished executing.
+// function makeFunc() {
+//   const name = "Mozilla";
+//   function displayName() {
+//     console.log(name);
+//   }
+//   return displayName;
+// }
+
+// const myFunc = makeFunc();
+// myFunc();
+
+
+</script>
+<script>
+// document.getElementById("orange").addEventListener("click", function() {
+//     document.body.style.backgroundColor = "orange";
+// });
+
+// document.getElementById("green").addEventListener("click", function() {
+//     document.body.style.backgroundColor = "green";
+// });
+
+function cLickHandler(color){
+    // document.body.style.backgroundColor = `${color}`;
+    return function(){
+        document.body.style.backgroundColor = `${color}`;
+    }
+}
+
+document.getElementById("orange").onclick = cLickHandler("orange");
+document.getElementById("green").onclick = cLickHandler("green");
+</script>
+</html>
